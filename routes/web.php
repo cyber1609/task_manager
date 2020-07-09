@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('tasks', 'TaskController');
 Route::post('update-order','TaskController@updateOrder');
+Route::get('/', function () {
+    return view('welcome');
+});
