@@ -1,0 +1,22 @@
+@import '~jquery-ui/themes/base/all.css';
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+}
+
+.highlight {
+    background: #f7e7d3;
+    min-height: 30px;
+    list-style-type: none;
+}
+
+.handle {
+    align-items: center;
+    min-width: 18px;
+    height: 15px;
+    display: inline-block;
+    cursor: move;
+    margin-right: 10px;
+}
+
