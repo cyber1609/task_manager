@@ -1,1 +1,1 @@
-"web: vendor/bin/task_manager public/"
+"web: vendor/bin/heroku-php-nginx public/ public/"
