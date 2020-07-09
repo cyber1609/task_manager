@@ -15,7 +15,6 @@ $(document).ready(function() {
             method:'POST',
             data:{priority:priorityString},
             success:function(){
-                alert('Successfully updated')
             }
         })
     }
@@ -30,5 +29,15 @@ $(document).ready(function() {
             updateToDatabase(sortData.join(','))
         }
     })
+
+    $("#select-project").change(function (){
+        let project_id = $('#select-project').val();
+        $(".item").map(function () {
+            $(this).hide();
+            if ($(this).attr('id') === project_id)
+                $(this).show();
+        });
+
+    });
 
 })

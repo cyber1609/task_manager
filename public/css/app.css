@@ -1537,3 +1537,9 @@ a.ui-button:active,
   margin-right: 10px;
 }
 
+.project-selector {
+  position: absolute;
+  right: 0px;
+  padding-right: 10px;
+}
+

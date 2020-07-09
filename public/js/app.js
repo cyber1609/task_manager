@@ -39989,7 +39989,6 @@ global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 $(document).ready(function () {
   var csrf_token = $('#token').html();
-  console.log(csrf_token);
 
   function updateToDatabase(priorityString) {
     $.ajaxSetup({
@@ -40003,9 +40002,7 @@ $(document).ready(function () {
       data: {
         priority: priorityString
       },
-      success: function success() {
-        alert('Successfully updated');
-      }
+      success: function success() {}
     });
   }
 
@@ -40020,6 +40017,13 @@ $(document).ready(function () {
       });
       updateToDatabase(sortData.join(','));
     }
+  });
+  $("#select-project").change(function () {
+    var project_id = $('#select-project').val();
+    $(".item").map(function () {
+      $(this).hide();
+      if ($(this).attr('id') === project_id) $(this).show();
+    });
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
